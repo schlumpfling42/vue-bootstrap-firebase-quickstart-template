@@ -18,10 +18,10 @@ Bootstrap helps you to layout the elements that the browser displays and makes t
 https://firebase.google.com/docs
 Firebase is a Google product and provides services like authentication, a datastore and also allows to host your webapp.
 The most intriguing aspect is, that it is free to use in the beginning, until your website takes off and has a lot of traffic.
-##VSCode
+## VSCode
 https://code.visualstudio.com/
 VSCode is an editor for source code. It is free and is very extensible. Once you start using it, you will find and start extensions, that will make coding a lot easier.
-##Github
+## Github
 Github is a website that will let you manage the project, it will be the central site for keeping documentation like this, source code and issues that others find.
 ## Git
 https://git-scm.com/
