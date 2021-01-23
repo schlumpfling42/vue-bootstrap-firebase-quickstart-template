@@ -22,5 +22,7 @@ The most intriguing aspect is, that it is free to use in the beginning, until yo
 https://code.visualstudio.com/
 VSCode is an editor for source code. It is free and is very extensible. Once you start using it, you will find and start extensions, that will make coding a lot easier.
 ##Github
-Github is a website that will let you manage the project, it will be the central site for keeping documentation like this, source code and issues that others find. \
-Github uses a tool called Git to maintain versions of your source code. This is very useful, especially when multiple people work on the same file. You do your changes locally and when you have a version you want to share, you can publish these changes to Github. Git will let you know when there are conlficts, when somebody else changed the same file and ask you to look at the change and merge your change with the other one.
+Github is a website that will let you manage the project, it will be the central site for keeping documentation like this, source code and issues that others find.
+## Git
+https://git-scm.com/
+Git is a tool (used by Github) to maintain versions of your source code. This is very useful, especially when multiple people work on the same file. You do your changes locally and when you have a version you want to share, you can publish these changes to Github. Git will let you know when there are conlficts, when somebody else changed the same file and ask you to look at the change and merge your change with the other one.
