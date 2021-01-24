@@ -3,3 +3,4 @@ A template for starting a new project with VueJS, Bootstrap and firebase. The te
 * [Web 101 (skip if you have dabbled with websites before)](./Web101.md)
 * [Tools (what do I need to build a webapp, if you've heard of Node, NPM, VueJS, Bootstrap and Firebase, skip this)](./Tools.md)
 * [Setup the tools](./SetupTools.md)
+* [Setup Firebase](./SetupFirebase.md)
