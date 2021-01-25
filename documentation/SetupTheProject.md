@@ -22,4 +22,4 @@ Start Visual Studio Code. Once it's started click on File -> Open Folder and sel
 
 ## Start up the local server for the first time
 Open a Terminal in VSCode and enter the following command `npm run serve`. The server will start on port 8080 on localhost, which is your computer. \
-Open a browser and enter `http://localhost:8080/` in the address line and you will see the Hello World Vue app.
+Open a browser and enter [`http://localhost:8080/`](http://localhost:8080/) in the address line and you will see the Hello World Vue app.
