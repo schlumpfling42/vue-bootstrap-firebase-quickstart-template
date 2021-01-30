@@ -3,8 +3,12 @@
 https://nodejs.org/ \
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. 
 Node will help to run your webapp on your computer. It will act as the server for the HTML page, so your browser can load it. This will allow you to make changes in your Javascript code and see the result instantaneously.
-## NPM (Node Package Manager)
+### NPM (Node Package Manager)
 NPM is a software package manager that is part of NodeJS. It allows you to use packages, that other developers made, so that you don't have to reinvent the wheel. There are a lot of packages out there that will make the development process easier, so you don't have to worry about a lot of details.
+### Babel 
+Babel convert current Javascript code into a backwards compatible version of JavaScript in current and older browsers or environments. SO you can use the newest features of Javascript and Babel will make sure it runs in most of the Browser versions currently used.
+### ESLint
+ESLint statically analyzes your code to quickly find problems. ESLint will help you to find issues in your code while you develop it.
 ## VueJS
 https://vuejs.org/ \
 VueJs is a modern Javascript framework for developing web user interfaces.
