@@ -13,6 +13,7 @@ Let's look at what was created \
   * `favicon.ico` The default icon for the app.
 * `src` The root folder for all source code files
   * `assets` Static resource files
+  * [`main.js`](./01_InitialProjectFiles/src/main.js) Main Javascript file that initializes VueJS and defines what VueJS component will be inserted into the HTML page.
   * [`App.vue`](./01_InitialProjectFiles/src/App.vue) Defines the app component that is referred by `index.html`. This is the starting point for all you VueJS code.
   * `components` A folder containing VueJS components, there are no conventions how you structure your VueJS code, but it is recommended to have a suitable directory structure, so you easily find the code you are looking for.
   * [`HelloWorld.vue`](./01_InitialProjectFiles/src/components/HelloWorld.vue) Example Hello World component.
