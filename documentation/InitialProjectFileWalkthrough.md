@@ -61,7 +61,7 @@ Supported browsers
   ]
 }
 ```
-## [`public/index.html`](./InitialProjectFiles/public/index.html)
+## [`public/index.html`](./01_InitialProjectFiles/public/index.html)
 ```
 <!DOCTYPE html>
 <html>
@@ -83,7 +83,7 @@ Body contains the elements that are used to render the page, for VueJS we only n
 </html>
 ```
 
-## [`src\main.js`](./InitialProjectFiles/src/main.js)
+## [`src\main.js`](./01_InitialProjectFiles/src/main.js)
 The keyword `import` will let you use functions defined outside of this file. \
  `import Vue from 'vue'` will import the component `Vue` from the package `vue` \
  With that you can use the component `Vue`.
@@ -103,7 +103,7 @@ new Vue({
 }).$mount('#app')
 
 ```
-## [`src\App.vue`](./InitialProjectFiles/src/App.vue)
+## [`src\App.vue`](./01_InitialProjectFiles/src/App.vue)
 A vue file has 3 segments:
 * template contains the html code
 * script contains the Javascript code
@@ -156,7 +156,7 @@ Her we define that the element with the id `app` uses a certain font, font style
 }
 </style>
 ```
-## [`components\HelloWorld.vue`](./InitialProjectFiles/src/components/HelloWorld.vue)
+## [`components\HelloWorld.vue`](./01_InitialProjectFiles/src/components/HelloWorld.vue)
 ```
 <template>
   <div class="hello">
