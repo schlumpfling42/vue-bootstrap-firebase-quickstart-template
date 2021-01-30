@@ -5,7 +5,6 @@ Open a Terminal in VSCode and run `firebase init hosting`. Follow the instructio
 - Answer `What do you want to use as your public directory?` with `dist`
 - Answer `Configure as a single-page app (rewrite all urls to /index.html)` with `y`
 - Answer `Set up automatic builds and deploys with GitHub?`with `n`
-- Answer `File public/index.html already exists. Overwrite?` with `n`
 
 You should be all set now. \
 Run `npm run build` to create the build to deploy. \
