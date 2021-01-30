@@ -7,7 +7,7 @@ Open a Terminal in VSCode and run `firebase init hosting`. Follow the instructio
 - Answer `Set up automatic builds and deploys with GitHub?`with `n`
 - Answer `File public/index.html already exists. Overwrite?` with `n`
 
-You should be all set now. \ 
+You should be all set now. \
 Run `npm run build` to create the build to deploy. \
-Run `firebase deploy --only hosting` to deploy. \
+Run `firebase deploy` to deploy. \
 The output will tell you the URL you can use to test the deployment.
