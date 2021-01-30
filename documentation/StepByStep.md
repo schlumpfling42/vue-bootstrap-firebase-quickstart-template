@@ -7,3 +7,4 @@ A template for starting a new project with VueJS, Bootstrap and firebase. The te
 1. [Setup the tools](./SetupTools.md)
 2. [Setup Firebase](./SetupFirebase.md)
 3. [Setup the Project](./SetupTheProject.md)
+4. [Walk through the generated/initial project files](./InitialProjectFileWalkthrough.md)
