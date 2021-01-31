@@ -1,9 +1,9 @@
 # Add Bootstrap
 ## Install bootstrap
-Open a Terminal in VSCode and run `npm install bootstrap-vue`. This wi install the package bootstrap-vue and add it to package.json.
+Open a Terminal in VSCode and run `npm install bootstrap-vue`. This will install the package bootstrap-vue and add it to package.json.
 Please got to the [Bootstrap Vue](https://bootstrap-vue.org/) to have a look at the documentation, we will only use a couple of elements.
 ## Basic setting up
-Bootstrap needs to be setup what your app starts and the best place to do that is `main.js`. This is how it is looking right now: 
+Bootstrap needs to be setup when your app starts and the best place to do that is [`main.js`](./02_AddingBootstrap/src/main.js). This is how it is looking right now: 
 ```
 import Vue from 'vue';
 // Import bootstrap, icons and css files that are needed
@@ -24,7 +24,7 @@ new Vue({
 ```
 ## Adding a bootstrap Navigation Bar
 We are going to create components that only serve one purpose and try not to overload things. So the navigation bar will be its own  component. \
-Create a new file `/src/components/NavigationBar.vue` with the following content:
+Create a new file [`/src/components/NavigationBar.vue`](./02_AddingBootstrap/src/components/NavigationBar.vue) with the following content:
 ```
 <template>
   <div>
@@ -67,7 +67,7 @@ export default {
 <style scoped>
 </style>
 ```
-We have defined the component, but it's not used anywhere. We need to add it to `App.vue`. Here is how it would look like:
+We have defined the component, but it's not used anywhere. We need to add it to [`App.vue`](./02_AddingBootstrap/src/components/NavigationBar.vue). Here is how it would look like:
 ```
 <template>
   <div id="app">

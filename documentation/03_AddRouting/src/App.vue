@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <NavigationBar />
-    // This is the element the route component will be displayed in
     <router-view></router-view>
   </div>
 </template>

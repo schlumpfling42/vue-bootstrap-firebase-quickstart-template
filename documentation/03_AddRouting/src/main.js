@@ -17,8 +17,6 @@ Vue.use(Router);
 
 const router = new Router({
   mode: 'history',
-  // Define 3 routes, each route has a name and a url. 
-  // Changing the URL will lead the matching Compontent bein displayed
   routes: [
     {
       name: 'Home',
