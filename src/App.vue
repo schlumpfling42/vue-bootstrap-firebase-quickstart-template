@@ -5,18 +5,8 @@
 </template>
 
 <script>
-import {auth} from './util/firebase'
-
 export default {
   name: 'App',
-  created() {
-    const self = this;
-    auth.onAuthStateChanged(function(user) {
-      if (!user) {
-        self.$router.push("/login");
-      }
-    });
-  }
 }
 </script>
 

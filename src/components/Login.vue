@@ -71,14 +71,15 @@
                 email: "",
                 password: "",
                 error: null,
-                
             };
         },
         created() {
             const self = this;
             auth.onAuthStateChanged(user => {
                 if(user) {
-                    self.$router.push("/");
+                    if(self.$router.currentRoute.path != "/") {
+                        self.$router.push("/");
+                    }
                 }
             });
         },

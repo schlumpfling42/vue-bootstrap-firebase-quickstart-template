@@ -258,22 +258,19 @@ In VSCode add a new file [`src/components/Login.vue`](../src/components/Login.vu
                 email: "",
                 password: "",
                 error: null,
-                
             };
         },
         created() {
             const self = this;
-            // The function'onAuthStateChange' is a listener that will be called when a user logged in or out.
-            // Here we care only about login, the logged in user will be the parameter
             auth.onAuthStateChanged(user => {
                 if(user) {
-                    // 'push' will change the address in the browser address bar. All addresses will be relative to the hostname
-                    self.$router.push("/");
+                    if(self.$router.currentRoute.path != "/") {
+                        self.$router.push("/");
+                    }
                 }
             });
         },
         methods: {
-            // Sign in with the email address and password. An error will be displayed if you entered invalid credentials.
             login() {
                 auth.signInWithEmailAndPassword(this.email, this.password)
                     .catch((err) => {
@@ -289,7 +286,6 @@ In VSCode add a new file [`src/components/Login.vue`](../src/components/Login.vu
         margin-top:20%
     }
 </style>
-
 ```
 ## Add Registration and Login to routes
 The routes had to be reworked, we don't want to show the navigation header when we register a user or login. Vue allows nested routing. There will be 3 top level components. Regiter, Login and Main. Main will ake over the functionionality App had before. \
@@ -377,16 +373,6 @@ import {auth} from './util/firebase'
 
 export default {
   name: 'App',
-  created() {
-    const self = this;
-    // We use the 'onAuthStateChange' to determin if the user is logged in. If not, redirect to the login page. This is the login check. 
-    // When you open the app in the browser, it will try to figure out if we have a valid session .. very elegant and super easy
-    auth.onAuthStateChanged(function(user) {
-      if (!user) {
-        self.$router.push("/login");
-      }
-    });
-  }
 }
 </script>
 
@@ -403,7 +389,7 @@ export default {
 Here is the new [`Main.vue`](../src/components/Main.vue)
 ```
 <template>
-  <div>
+  <div v-if="authenticated">
     <NavigationBar />
     <!-- This is the element the route component will be displayed in -->
     <router-view></router-view>
@@ -412,23 +398,36 @@ Here is the new [`Main.vue`](../src/components/Main.vue)
 
 <script>
 import NavigationBar from './NavigationBar';
+import {auth} from '../util/firebase';
 
 export default {
+  name: 'App',
   components: {
     NavigationBar
   },
+  data() {
+    return {
+      authenticated: false,
+    }
+  },
+  created() {
+    const self = this;
+    auth.onAuthStateChanged(function(user) {
+      if (!user) {
+        self.authenticated = false;
+        if(self.$router.currentRoute.path !== "/login") {
+          self.$router.push("/login");
+        }
+      } else {
+        self.authenticated = true;
+      }
+    });
+  }
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 </style>
+
 ```
 ## Fire it up and test it out
 If the server is not running, run `npm run serve` to try it out. Change things around in the compnent, to see the effects.

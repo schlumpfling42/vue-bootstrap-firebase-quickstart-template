@@ -19,6 +19,7 @@ Vue.use(Router);
 
 const router = new Router({
   mode: 'history',
+  duplicateNavigationPolicy: 'ignore',
   // Define 3 routes, each route has a name and a url. 
   // Changing the URL will lead the matching Compontent bein displayed
   routes: [
