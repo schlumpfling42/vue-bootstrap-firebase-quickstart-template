@@ -11,3 +11,5 @@ A template for starting a new project with VueJS, Bootstrap and firebase. The te
 5. [Deploy the project to Firebase](./DeployInitialProjectToFirebase.md)
 6. [Add Bootstrap](./AddBootstrap.md)
 7. [Add Routing](./AddRouting.md)
+8. [Add Firebase](./AddFirebase.md)
+9. [Add Registration and Login](./AddRegistrationAndLogin)

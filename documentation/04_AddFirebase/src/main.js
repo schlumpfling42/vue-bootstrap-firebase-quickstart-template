@@ -1,12 +1,11 @@
 import Vue from 'vue';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
-import '../../04_AddFirebase/src/node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../04_AddFirebase/src/node_modules/bootstrap-vue/dist/bootstrap-vue.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 import Router from 'vue-router';
 import App from './App.vue';
 import HelloWorld from './components/HelloWorld.vue';
-import Page1 from './components/Page1.vue';
-import Page2 from './components/Page2.vue';
+import Page from './components/Page.vue';
 
 // Install BootstrapVue plugin
 Vue.use(BootstrapVue);
@@ -17,6 +16,8 @@ Vue.use(Router);
 
 const router = new Router({
   mode: 'history',
+  // Define 3 routes, each route has a name and a url. 
+  // Changing the URL will lead the matching Compontent bein displayed
   routes: [
     {
       name: 'Home',
@@ -26,12 +27,18 @@ const router = new Router({
     {
       name: 'Page1',
       path: '/Page1',
-      component: Page1,
+      component: Page,
+      props: {
+        title: "Page1"
+      }
     },
     {
       name: 'Page2',
       path: '/page2',
-      component: Page2,
+      component: Page,
+      props: {
+        title: "Page2"
+      }
     },
   ]
 });

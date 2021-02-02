@@ -35,12 +35,18 @@ const router = new Router({
     {
       name: 'Page1',
       path: '/Page1',
-      component: Page1,
+      component: Page,
+      props: {
+        title: "Page1"
+      }
     },
     {
       name: 'Page2',
       path: '/page2',
-      component: Page2,
+      component: Page,
+      props: {
+        title: "Page2"
+      }
     },
   ]
 });
@@ -50,7 +56,7 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 ```
-The new components are here: [`Page1.vue`](./03_AddRouting/src/components/Page1.vue), [`Page2.vue`](./03_AddRouting/src/components/Page2.vue)
+The new component is here: [`Page.vue`](./03_AddRouting/src/components/Page.vue)
 Now we need a spot the route element will be shown in. We want to change the main view. For that we need to change [`App.vue`](./03_AddRouting/src/App.vue).
 ```
 <template>

@@ -1,7 +1,7 @@
 # Deploy to Firebase
 ## Install Firebase package
-Open a Terminal in VSCode and run `npm install firebase`. Have a look at p `package.json` firebase has been added. 
-## Get the configuration for Firebase and 
+Open a Terminal in VSCode and run `npm install firebase`. Have a look at p `package.json` firebase has been added. \
+Get the configuration for Firebase and 
 - Go to the Firbase console `https://console.firebase.google.com/`
 - Select your project
 - Click on the gear next to `Project Overview` and click on `Project Settings`
@@ -19,3 +19,8 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 export const auth = firebaseApp.auth();
 auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 ```
+## Enable Authentication in Firebase
+- Go to the Firbase console `https://console.firebase.google.com/`
+- Select your project
+- Click on `Authentication` and then `Get started`
+- Click on `Sign-In Methode`, click on `Email/Password` and enable it 

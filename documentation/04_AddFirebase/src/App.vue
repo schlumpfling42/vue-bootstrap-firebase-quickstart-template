@@ -1,21 +1,17 @@
 <template>
   <div id="app">
+    <NavigationBar />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import {auth} from './util/firebase'
+import NavigationBar from './components/NavigationBar'
 
 export default {
   name: 'App',
-  created() {
-    const self = this;
-    auth.onAuthStateChanged(function(user) {
-      if (!user) {
-        self.$router.push("/login");
-      }
-    });
+  components: {
+    NavigationBar
   }
 }
 </script>

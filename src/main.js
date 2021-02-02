@@ -4,9 +4,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import Router from 'vue-router';
 import App from './App.vue';
+import Main from './components/Main.vue';
 import HelloWorld from './components/HelloWorld.vue';
-import Page1 from './components/Page1.vue';
-import Page2 from './components/Page2.vue';
+import Page from './components/Page.vue';
+import Login from './components/Login.vue';
+import Register from './components/Register.vue';
 
 // Install BootstrapVue plugin
 Vue.use(BootstrapVue);
@@ -21,19 +23,41 @@ const router = new Router({
   // Changing the URL will lead the matching Compontent bein displayed
   routes: [
     {
-      name: 'Home',
       path: '/',
-      component: HelloWorld,
+      component: Main,
+      children: [
+        {
+          name: 'Home',
+          path: '/',
+          component: HelloWorld,
+        },
+        {
+          name: 'Page1',
+          path: '/Page1',
+          component: Page,
+          props: {
+            title: "Page1"
+          }
+        },
+        {
+          name: 'Page2',
+          path: '/page2',
+          component: Page,
+          props: {
+            title: "Page2"
+          }
+        },
+      ],
     },
     {
-      name: 'Page1',
-      path: '/Page1',
-      component: Page1,
+      name: 'Login',
+      path: '/login',
+      component: Login,
     },
     {
-      name: 'Page2',
-      path: '/page2',
-      component: Page2,
+      name: 'Register',
+      path: '/register',
+      component: Register,
     },
   ]
 });
